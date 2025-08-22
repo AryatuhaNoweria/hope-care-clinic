@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Services - HopeCare Clinic</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #f5f9ff 0%, #e8f4fd 100%);
+    }
+    .navbar {
+      background: linear-gradient(135deg, #2a4ec2 0%, #1e3a8a 100%) !important;
+    }
+    .hero-section {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 80px 0;
+    }
+    .section { padding: 60px 0; }
+    .service-card {
+      border: none;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+      height: 100%;
+    }
+    .service-card:hover {
+      transform: translateY(-5px);
+    }
+    .service-icon {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+      font-size: 2rem;
+      color: white;
+    }
+    .footer {
+      background: linear-gradient(135deg, #1e3a8a 0%, #2a4ec2 100%);
+      color: white;
+      padding: 40px 0 20px;
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="home.html">
+      <i class="fas fa-heartbeat me-2"></i>HopeCare Clinic
+    </a>
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#clinicNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="clinicNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link active" href="services.html">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="doctors.html">Doctors</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+       
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<section class="hero-section">
+  <div class="container text-center">
+    <h1 class="display-4 fw-bold mb-4">Our Services</h1>
+    <p class="lead">Comprehensive healthcare services delivered with compassion and excellence</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="text-center mb-5">Primary Care Services</h2>
+    <div class="row g-4">
+      <div class="col-lg-4 col-md-6">
+        <div class="card service-card">
+          <img src="images/general check ups.webp" class="card-img-top" alt="General Checkup">
+          <div class="card-body text-center">
+            <div class="service-icon" style="background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);">
+              <i class="fas fa-stethoscope"></i>
+            </div>
+            <h5 class="card-title">General Checkup</h5>
+            <p class="card-text">Comprehensive health examinations including vital signs, physical assessment, and preventive care.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6">
+        <div class="card service-card">
+          <img src="images/paedatric.webp">
+          <div class="card-body text-center">
+            <div class="service-icon" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%);">
+              <i class="fas fa-baby"></i>
+            </div>
+            <h5 class="card-title">Pediatric Care</h5>
+            <p class="card-text">Specialized healthcare for children from birth through adolescence, focusing on growth and development.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6">
+        <div class="card service-card">
+          <img src="images/Adult Medicine.webp">
+          <div class="card-body text-center">
+            <div class="service-icon" style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);">
+              <i class="fas fa-user-plus"></i>
+            </div>
+            <h5 class="card-title">Adult Medicine</h5>
+            <p class="card-text">Comprehensive healthcare for adults including chronic disease management and preventive care.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section bg-light">
+  <div class="container">
+    <h2 class="text-center mb-5">Maternity & Women's Health</h2>
+    <div class="row g-4">
+      <div class="col-lg-4 col-md-6">
+        <div class="card service-card">
+          <img src="images/martenity.webp" class="card-img-top" alt="Maternity">
+          <div class="card-body text-center">
+            <div class="service-icon" style="background: linear-gradient(135deg, #ec4899 0%, #be185d 100%);">
+              <i class="fas fa-baby-carriage"></i>
+            </div>
+            <h5 class="card-title">Prenatal Care</h5>
+            <p class="card-text">Comprehensive prenatal care including regular checkups, ultrasounds, and pregnancy monitoring.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6">
+        <div class="card service-card">
+          <img src="images/Gynecology.webp">
+          <div class="card-body text-center">
+            <div class="service-icon" style="background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);">
+              <i class="fas fa-heart"></i>
+            </div>
+            <h5 class="card-title">Gynecology</h5>
+            <p class="card-text">Specialized women's health services including reproductive health and gynecological care.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6">
+        <div class="card service-card">
+          <img src="images/Postnatal Care.webp">
+          <div class="card-body text-center">
+            <div class="service-icon" style="background: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%);">
+              <i class="fas fa-baby"></i>
+            </div>
+            <h5 class="card-title">Postnatal Care</h5>
+            <p class="card-text">Comprehensive care for mothers and newborns after delivery, including breastfeeding support.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="text-center mb-5">Diagnostic Services</h2>
+    <div class="row g-4">
+      <div class="col-lg-4 col-md-6">
+        <div class="card service-card">
+          <img src="images/Lab Testing.webp" class="card-img-top" alt="Lab Services">
+          <div class="card-body text-center">
+            <div class="service-icon" style="background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);">
+              <i class="fas fa-flask"></i>
+            </div>
+            <h5 class="card-title">Laboratory Testing</h5>
+            <p class="card-text">Comprehensive laboratory services with fast and accurate results for various medical tests.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6">
+        <div class="card service-card">
+          <img src="services.html images/imaging.jpg">,
+          <img src="images/radiology image.webp">
+          <div class="card-body text-center">
+            <div class="service-icon" style="background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);">
+              <i class="fas fa-x-ray"></i>
+            </div>
+            <h5 class="card-title">Imaging Services</h5>
+            <p class="card-text">Advanced imaging services including X-rays, ultrasounds, and other diagnostic imaging.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6">
+        <div class="card service-card">
+          <img src="images/Pathology.jpg">
+          <div class="card-body text-center">
+            <div class="service-icon" style="background: linear-gradient(135deg, #84cc16 0%, #65a30d 100%);">
+              <i class="fas fa-microscope"></i>
+            </div>
+            <h5 class="card-title">Pathology</h5>
+            <p class="card-text">Specialized pathology services for tissue analysis and disease diagnosis.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <h5><i class="fas fa-heartbeat me-2"></i>HopeCare Clinic</h5>
+        <p>Providing quality healthcare with compassion and excellence since 2010.</p>
+      </div>
+      <div class="col-md-6 text-md-end">
+        <h6>Contact Information</h6>
+        <p><i class="fas fa-map-marker-alt me-2"></i>Kampala, Uganda</p>
+        <p><i class="fas fa-phone me-2"></i>0700318634</p>
+        <p><i class="fas fa-envelope me-2"></i>info@hopecareclinic.com</p>
+      </div>
+    </div>
+    <hr class="my-4">
+    <div class="text-center">
+      <p>&copy; 2024 HopeCare Clinic. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

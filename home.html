@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HopeCare Clinic - Quality Healthcare You Can Trust</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #f5f9ff 0%, #e8f4fd 100%);
+      line-height: 1.6;
+    }
+
+    .navbar {
+      background: linear-gradient(135deg, #2a4ec2 0%, #1e3a8a 100%) !important;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 100px 20px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+    }
+
+    .hero-video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 1;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(102, 126, 234, 0.7);
+      z-index: 2;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="white" opacity="0.1"/><circle cx="75" cy="75" r="1" fill="white" opacity="0.1"/><circle cx="50" cy="10" r="0.5" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+      z-index: 3;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 4;
+    }
+
+    .hero h1 {
+      font-size: 3.5rem;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .hero .lead {
+      font-size: 1.3rem;
+      margin-bottom: 30px;
+    }
+
+    .section {
+      padding: 80px 0;
+    }
+
+    .card {
+      border: none;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      overflow: hidden;
+      height: 100%;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    }
+
+    .card img {
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .stats-section {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 60px 0;
+    }
+
+    .stat-item {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .stat-number {
+      font-size: 3rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      border: none;
+      padding: 12px 30px;
+      border-radius: 25px;
+      font-weight: 600;
+    }
+
+    .btn-primary:hover {
+      background: linear-gradient(135deg, #5a67d8 0%, #6b46c1 100%);
+      transform: translateY(-2px);
+    }
+
+    .footer {
+      background: linear-gradient(135deg, #1e3a8a 0%, #2a4ec2 100%);
+      color: white;
+      padding: 40px 0 20px;
+    }
+
+    .social-links a {
+      color: white;
+      font-size: 1.5rem;
+      margin: 0 10px;
+      transition: color 0.3s ease;
+    }
+
+    .social-links a:hover {
+      color: #667eea;
+    }
+
+    .feature-icon {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+      font-size: 2rem;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="home.html">
+      <i class="fas fa-heartbeat me-2"></i>HopeCare Clinic
+    </a>
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#clinicNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="clinicNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link active" href="home.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="doctors.html">Doctors</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero">
+  <!-- Video Background -->
+  <video class="hero-video" autoplay muted loop playsinline>
+    <source src="images/watermarked_preview.mp4" type="video/mp4">
+    <!-- Fallback for browsers that don't support video -->
+    Your browser does not support the video tag.
+  </video>
+  
+  <div class="container hero-content">
+    <h1>Welcome to HopeCare Clinic</h1>
+    <p class="lead">Quality healthcare you can trust, delivered with compassion and excellence</p>
+    <div class="d-flex justify-content-center align-items-center mb-4">
+      <i class="fas fa-star text-warning me-2"></i>
+      <span class="me-4">4.9/5 Patient Rating</span>
+      <i class="fas fa-users text-info me-2"></i>
+      <span>10,000+ Patients Served</span>
+    </div>
+    <div class="d-flex justify-content-center gap-3">
+      <a href="#appointment" class="btn btn-light btn-lg">Book Appointment</a>
+      <a href="contact.html" class="btn btn-outline-light btn-lg">Contact Us</a>
+    </div>
+  </div>
+</section>
+
+<!-- Statistics Section -->
+<section class="stats-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+        <div class="stat-item">
+          <div class="stat-number">15+</div>
+          <div>Years of Experience</div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="stat-item">
+          <div class="stat-number">25+</div>
+          <div>Expert Doctors</div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="stat-item">
+          <div class="stat-number">10K+</div>
+          <div>Happy Patients</div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="stat-item">
+          <div class="stat-number">24/7</div>
+          <div>Emergency Care</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Services -->
+<section class="section" id="services">
+  <div class="container">
+    <h2 class="text-center mb-5">Our Services</h2>
+    <div class="row g-4">
+
+      <div class="col-md-4">
+        <div class="card">
+          <img src="images/general check ups.webp" class="card-img-top" alt="General Checkup">
+          <div class="card-body text-center">
+            <div class="feature-icon" style="background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);">
+              <i class="fas fa-stethoscope"></i>
+            </div>
+            <h5 class="card-title">General Checkup</h5>
+            <p class="card-text">Routine health exams and preventive care for all age groups with comprehensive health assessments.</p>
+            <a href="services.html" class="btn btn-outline-primary">Learn More</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card">
+          <img src="images/martenity.webp" class="card-img-top" alt="Maternity">
+          <div class="card-body text-center">
+            <div class="feature-icon" style="background: linear-gradient(135deg, #ec4899 0%, #be185d 100%);">
+              <i class="fas fa-baby-carriage"></i>
+            </div>
+            <h5 class="card-title">Maternity Services</h5>
+            <p class="card-text">Comprehensive prenatal and postnatal care for mothers and babies with expert obstetric care.</p>
+            <a href="services.html" class="btn btn-outline-primary">Learn More</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card">
+          <img src="images/Lab Testing.webp" class="card-img-top" alt="Lab Services">
+          <div class="card-body text-center">
+            <div class="feature-icon" style="background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);">
+              <i class="fas fa-flask"></i>
+            </div>
+            <h5 class="card-title">Lab Testing</h5>
+            <p class="card-text">Accurate diagnostic tests with fast results and comprehensive laboratory services.</p>
+            <a href="services.html" class="btn btn-outline-primary">Learn More</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="text-center mt-5">
+      <a href="services.html" class="btn btn-primary btn-lg">View All Services</a>
+    </div>
+  </div>
+</section>
+
+<!-- Appointment Form -->
+<section class="section bg-light" id="appointment">
+  <div class="container">
+    <h2 class="text-center mb-5">Book an Appointment</h2>
+    <div class="row g-5">
+      <div class="col-lg-8 mx-auto">
+        <form class="row g-3">
+          <div class="col-md-6">
+            <label for="fname" class="form-label">First Name</label>
+            <input type="text" id="fname" class="form-control" required>
+          </div>
+          <div class="col-md-6">
+            <label for="lname" class="form-label">Last Name</label>
+            <input type="text" id="lname" class="form-control" required>
+          </div>
+          <div class="col-md-6">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" id="email" class="form-control" required>
+          </div>
+          <div class="col-md-6">
+            <label for="phone" class="form-label">Phone Number</label>
+            <input type="tel" id="phone" class="form-control" required>
+          </div>
+          <div class="col-md-6">
+            <label for="service" class="form-label">Service Needed</label>
+            <select id="service" class="form-select" required>
+              <option selected disabled>Select a service</option>
+              <option>General Checkup</option>
+              <option>Maternity Care</option>
+              <option>Lab Testing</option>
+              <option>Pediatric Care</option>
+              <option>Emergency Care</option>
+            </select>
+          </div>
+          <div class="col-md-6">
+            <label for="date" class="form-label">Preferred Date</label>
+            <input type="date" id="date" class="form-control" required>
+          </div>
+          <div class="col-12">
+            <label for="message" class="form-label">Additional Notes</label>
+            <textarea id="message" class="form-control" rows="3" placeholder="Any specific concerns or requirements..."></textarea>
+          </div>
+          <div class="col-12 text-center">
+            <button class="btn btn-primary btn-lg">Book Appointment</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Why Choose Us -->
+<section class="section">
+  <div class="container">
+    <h2 class="text-center mb-5">Why Choose HopeCare Clinic?</h2>
+    <div class="row g-4">
+      <div class="col-lg-3 col-md-6">
+        <div class="card text-center h-100">
+          <div class="card-body p-4">
+            <div class="feature-icon" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%);">
+              <i class="fas fa-user-md"></i>
+            </div>
+            <h5 class="card-title">Expert Doctors</h5>
+            <p class="card-text">Experienced healthcare professionals dedicated to providing the best medical care.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="card text-center h-100">
+          <div class="card-body p-4">
+            <div class="feature-icon" style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);">
+              <i class="fas fa-clock"></i>
+            </div>
+            <h5 class="card-title">24/7 Care</h5>
+            <p class="card-text">Round-the-clock emergency services and support when you need it most.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="card text-center h-100">
+          <div class="card-body p-4">
+            <div class="feature-icon" style="background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);">
+              <i class="fas fa-heart"></i>
+            </div>
+            <h5 class="card-title">Compassionate Care</h5>
+            <p class="card-text">We treat every patient with kindness, empathy, and respect.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="card text-center h-100">
+          <div class="card-body p-4">
+            <div class="feature-icon" style="background: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%);">
+              <i class="fas fa-shield-alt"></i>
+            </div>
+            <h5 class="card-title">Modern Facilities</h5>
+            <p class="card-text">State-of-the-art medical equipment and modern healthcare facilities.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <h5><i class="fas fa-heartbeat me-2"></i>HopeCare Clinic</h5>
+        <p>Providing quality healthcare with compassion and excellence since 2010. We are committed to delivering the highest quality medical care to our community.</p>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <h6>Quick Links</h6>
+        <ul class="list-unstyled">
+          <li><a href="about.html" class="text-white-50">About Us</a></li>
+          <li><a href="services.html" class="text-white-50">Our Services</a></li>
+          <li><a href="doctors.html" class="text-white-50">Our Doctors</a></li>
+          <li><a href="contact.html" class="text-white-50">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <h6>Contact Information</h6>
+        <p><i class="fas fa-map-marker-alt me-2"></i>Kampala, Uganda</p>
+        <p><i class="fas fa-phone me-2"></i>0700318634</p>
+        <p><i class="fas fa-envelope me-2"></i>info@hopecareclinic.com</p>
+        <p><i class="fas fa-clock me-2"></i>Mon-Sat: 8AM-6PM</p>
+      </div>
+    </div>
+    <hr class="my-4">
+    <div class="text-center">
+      <p>&copy; 2024 HopeCare Clinic. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Ensure video plays
+  document.addEventListener('DOMContentLoaded', function() {
+    const video = document.querySelector('.hero-video');
+    const hero = document.querySelector('.hero');
+    
+    if (video) {
+      // Try to play the video
+      video.play().catch(function(error) {
+        console.log('Video autoplay failed:', error);
+        // Show a play button or handle fallback
+        video.style.display = 'none';
+        // Add a medical-themed fallback background
+        hero.style.background = 'linear-gradient(135deg, #667eea 0%, #764ba2 100%), url("data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 100 100\'%3E%3Cdefs%3E%3Cpattern id=\'medical\' width=\'50\' height=\'50\' patternUnits=\'userSpaceOnUse\'%3E%3Cpath d=\'M25 5 L35 15 L25 25 L15 15 Z\' fill=\'rgba(255,255,255,0.1)\'/%3E%3Ccircle cx=\'25\' cy=\'25\' r=\'3\' fill=\'rgba(255,255,255,0.1)\'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width=\'100\' height=\'100\' fill=\'url(%23medical)\'/%3E%3C/svg%3E")';
+      });
+      
+      // Ensure video loads
+      video.addEventListener('loadeddata', function() {
+        console.log('Medical video loaded successfully');
+      });
+      
+      video.addEventListener('error', function() {
+        console.log('Medical video failed to load');
+        // Hide video and use medical-themed gradient background
+        video.style.display = 'none';
+        hero.style.background = 'linear-gradient(135deg, #667eea 0%, #764ba2 100%), url("data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 100 100\'%3E%3Cdefs%3E%3Cpattern id=\'medical\' width=\'50\' height=\'50\' patternUnits=\'userSpaceOnUse\'%3E%3Cpath d=\'M25 5 L35 15 L25 25 L15 15 Z\' fill=\'rgba(255,255,255,0.1)\'/%3E%3Ccircle cx=\'25\' cy=\'25\' r=\'3\' fill=\'rgba(255,255,255,0.1)\'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width=\'100\' height=\'100\' fill=\'url(%23medical)\'/%3E%3C/svg%3E")';
+      });
+      
+      // Add a manual play button if needed
+      video.addEventListener('click', function() {
+        if (video.paused) {
+          video.play();
+        } else {
+          video.pause();
+        }
+      });
+    }
+  });
+</script>
+
+</body>
+</html>
+
